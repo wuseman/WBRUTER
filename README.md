@@ -11,22 +11,31 @@ Many times it's the easiest methods that are the most powerful methods, it's jus
 Android and Google, now have set a rule for locksettings via cli as via gui earlier, if you try to many attempts within X seconds you will be blocked for X seconds so wbruter via cli wont work anymore on devices that has been upgraded to latest version Android 10, older version should work fine unless they are upgraded to latest android version.
 
 Enable USB-Debugging via the methods below:
-Via GUI:
+
+#### Via GUI:
+
 Go to settings -> about > press on build number 7 times and the developer settings will be enable, go back to settings and press on developer mode and then enable USB DEBUGGING. If you found an android deviceon the street or something and want to break the pin this wont be possible unless you already know the pin so the device must have usb debugging enable for this to work. You wanna try this for fun then you can just enable usb debugging after you unlocked phone)
 
-Via cli/adb:
- settings put global development_settings_enabled 1
- setprop persist.service.adb.enable 1
-Via GUI (old layout now use --androidgui 4 instead)
+#### Via cli/adb:
+
+```
+settings put global development_settings_enabled 1
+setprop persist.service.adb.enable 1
+```
+
+#### Via GUI (old layout now use --androidgui 4 instead)
+
 Please use cli method instead since many devices has been set to erase the device after "10/15 wrong pin attempts" and this wont happen with the CLI method. (Updated: Jan/2019)
 Screenshot
 
-Via CLI:
+#### Via CLI:
+
+![wbruter](https://github.com/user-attachments/assets/fc5eff84-ea36-4afe-931e-3260b1bee611)
+
 From 0000 to 9999 takes ~83 minutes. In around ~1h you will with 100% guarantee have the pin code
 
+### Notice:
 
-
-Notice:
 If you will see a message similiar to message under you don't have to care, just let it run and it will be gone after ~4-5 failed attempts:
 
 ```
